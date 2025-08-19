@@ -4,7 +4,7 @@ built with a microservice architecture, WebSocket real-time communication, and s
 
 [🎥 Watch on YouTube](https://www.youtube.com/watch?v=GUWTqCiNAI0)
 
-[🎮 Test online](https://www.aetherarena.art)
+[🎮 Play online](https://www.aetherarena.art)
 
 ## 🕹️Features:
 Account management, enable/disable 2FA, JWT session management, Google sign in, upload avatar, prevent SQL injection / XSS attack
