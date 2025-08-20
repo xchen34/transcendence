@@ -67,7 +67,10 @@ Docker & Docker Compose & Makefile
 Google OAuth2 credentials & 2FA application
 
 ### build
-First put .env in the root with mandatory enviromental variable 
+1. Put your https certificat in /srcs/client/certificat/
+
+2. Create .env in the root with mandatory enviromental variable 
+
 GOOGLE_USER_ID
 
 JWT_SECRET
