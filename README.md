@@ -1,15 +1,14 @@
 # Transcendence — Real‑Time Multiplayer Game Platform
 
-> **Aether Arena / Transcendence** — A real‑time online multiplayer Pong‑style platform built with a microservice architecture.
 
 🎮 **Demo & Preview**
-- Video Demo (YouTube): https://www.youtube.com/watch?v=GUWTqCiNAI0
-- Play Online: https://www.aetherarena.art
+- [🎥 Video Demo (YouTube)](https://www.youtube.com/watch?v=GUWTqCiNAI0)  
+- [🎮 Play Online](https://www.aetherarena.art)
 
 ---
 
 ## Overview
-Transcendence is a **full‑stack online web game** developed by a team of 5. It delivers a scalable, and secure gameplay experience. The project leverages microservices and WebSocket real‑time communication. The frontend is powered by TailwindCSS Babylon.js for in‑browser 3D rendering, supporting local matches, AI practice, online duels, and tournament mode. It also includes a complete user system, match history, leaderboard, and friend management.
+Transcendence is a **full‑stack online web game** developed by a team of 5. It delivers a scalable, and secure gameplay experience. The project leverages microservices and WebSocket real‑time communication. The frontend is powered by TailwindCSS for visual style, Babylon.js for in‑browser 3D rendering, supporting local matches, AI practice, online duels, and tournament mode. It also includes a complete user system, match history, leaderboard, and friend management.
 
 ---
 
@@ -21,8 +20,8 @@ Transcendence is a **full‑stack online web game** developed by a team of 5. It
 - **3D Rendering**: Interactive game stages built with Babylon.js.
 - **Secure Authentication**: Google OAuth2, 2FA, and JWT session management.
 - **Containerized Deployment**: Docker & NGINX for reverse proxy, SSL termination, and load balancing.
-- **Production Ready**: Production flag disables client logs; optional preset accounts for testing.
-- **Real-time message**: System for friend status, game rank updates, and invitations, implemented with backend caching and efficient polling.
+- **Log system**: Explicit log system for monitoring.
+- **Real-time message**: System for friend status, game rank updates, and invitations, implemented with backend caching and efficient polling using websocket.
 - **Scalable game server**: Game logic runs on independent, horizontally scalable servers, establishing WebSocket connections only when necessary.
 - **Game AI**: Runs on the client side, simulating human-like behavior to ensure a fair and balanced match experience
 
@@ -138,24 +137,8 @@ Recommended browser: **Firefox**
 
 ## Deployment Notes
 - Update NGINX `servername` to match domain.
-- Use a trusted SSL certificate (Let’s Encrypt or commercial).
+- Use a trusted SSL certificate (Let’s Encrypt or commercial), ssl.sh can help you to configure certification.
 - Keep secrets (JWT, OAuth credentials) outside of repo.
-- For scaling:
-  - Use Redis / RabbitMQ as message broker
-  - Migrate DB to PostgreSQL/MySQL for higher concurrency
-  - Scale Game Engine horizontally with message queues
-
----
-
-## Production‑Ready Highlights
-**Backend Focus**
-- Designed Node.js/Fastify microservices for real‑time WebSocket gameplay, authentication, and record storage, deployed via Docker.
-
-**Frontend/Game Focus**
-- Built a 3D multiplayer Pong game using TypeScript + Babylon.js with frame synchronization and low‑latency input handling.
-
-**Fullstack/DevOps Focus**
-- Deployed microservices with Docker & NGINX, integrated OAuth2 + 2FA authentication, and automated build with Makefile.
 
 ---
 
@@ -165,6 +148,9 @@ Recommended browser: **Firefox**
 - Orchestration with Kubernetes/auto‑scaling
 - WAF to prevent more cyber attack
 - Responsive design to adapte all devices
+- ELK for monitoring system
+- Build front-end with React
+- Add Redis for static files
 
 ---
 
