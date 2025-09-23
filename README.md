@@ -45,16 +45,14 @@ Repository includes demo screenshots in `doc/`:
 ---
 
 ## Features
-- Account management with Google OAuth2 login
-- Two‑Factor Authentication (2FA) via QR code
-- JWT session management
+- Intuitive user interface
+- Secure account management and JWT session management
 - Avatar upload & profile editing
 - Friend management with real‑time status
 - Local play vs AI, local 2‑player mode
-- Online multiplayer (1v1) & tournament mode
+- Online remote play (1v1) & tournament mode
 - Game history & leaderboard
 - Disconnection handling & reconnection
-- Protection against SQL injection & XSS
 
 ---
 
@@ -62,7 +60,7 @@ Repository includes demo screenshots in `doc/`:
 ### Architecture
 ![System Architecture](doc/ft_transcendence.jpg)
 - **Microservices**: Decoupled services (Client, User, Game Engine, Friend, Record, Message Broker)
-- **Message Broker**: RESTAPI communication between services
+- **Message Broker**: RESTAPI communication between services, cached information will update only when needed
 - **NGINX**: API gateway, reverse proxy, SSL termination, static assets, load balancing
 
 ### Frontend
@@ -74,9 +72,9 @@ Repository includes demo screenshots in `doc/`:
 ### Backend
 - **Node.js + Fastify**: High‑performance web framework
 - **Microservices**:
-  - `client`: Frontend delivery, Reverse proxy, Load balancing
+  - `client`: Frontend delivery, Reverse proxy, API gateway, Load balancing
   - `user`: Authentication & account management
-  - `game-engine`: Game sessions, matchmaking, frame synchronization
+  - `game-engine`: Game sessions, frame synchronization, send game record
   - `friend`: Friend system & status updates
   - `record`: Game history & ranking
   - `message broker`: Event/message handling
@@ -150,7 +148,6 @@ Recommended browser: **Firefox**
 - Responsive design to adapte all devices
 - ELK for monitoring system
 - Build front-end with React
-- Add Redis for static files
 
 ---
 
