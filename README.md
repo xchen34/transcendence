@@ -156,6 +156,16 @@ MIT License. Contributions and feedback are welcome.
 
 ---
 
+## Contributors
+
+- [@swangarch](https://github.com/swangarch)
+- [@chrstnhu](https://github.com/chrstnhu)
+- [@xchen34](https://github.com/xchen34)
+- [@Roychrltt](https://github.com/Roychrltt)
+- [@TTSS0529](https://github.com/TTSS0529)
+
+---
+
 ## Repository & Contact
 - GitHub: https://github.com/swangarch/42transcendence
 
