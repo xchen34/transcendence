@@ -158,6 +158,8 @@ MIT License. Contributions and feedback are welcome.
 
 ## Contributors
 
+Project built with ❤️ by the team
+
 - [@swangarch](https://github.com/swangarch)
 - [@chrstnhu](https://github.com/chrstnhu)
 - [@xchen34](https://github.com/xchen34)
